@@ -1,0 +1,30 @@
+<div class="container">
+    <h3>專案管理</h3>
+    <span>設定步驟: 3.建置後動作</span>
+    <hr>
+
+    <div>
+        <div class="row">
+            <label class="col-md-2">設置觸發程序</label>
+            <div class="col-md-10">
+                <input name="procedure" type="radio" checked="true"> 遠端觸發程序<br>
+                <p>
+                    <input name="procedure" type="radio"> 定期設置 每日執行時間(00:00-23:59) <input type="time" value="23:59:00">
+                </p>
+
+            </div>
+        </div>
+        <div class="row">
+            <label class="col-md-2">電子郵件通知人</label>
+            <tag-input id="a" class="col-md-9" [ngModel]="emails" [errorMessages]="errorMessages" [validators]="validators" separatorKeys="[32]"></tag-input>
+            <input class="col-md-1" type="button" (click)="onEmailAdd('test@gmail.com')" value="選擇用戶">
+        </div>
+        
+        <nav>
+        <ul class="pager">
+            <li class="previous"><a routerLink="../" routerLinkActive="active">確認完成</a></li>
+            <li class="next"><a href="#">不儲存，返回</a></li>
+        </ul>
+    </nav>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+span {
+    color: dodgerblue;
+}
+
+.control-label::after { 
+   content:"*";
+   color:red;
+}
+
+p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    margin: 0 0 10px;
+}
+
+.settingDiv {
+    background-color: lightgrey;
+    padding: 10px 10px 10px 10px;
+}

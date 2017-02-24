@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>{{title}}</h1>
+  
+  <form class="form-signin" role="form" (ngSubmit)="onClickLogin(user)">
+    <label for="inputEmail" class="sr-only">請輸入帳號</label>
+    <input class="form-control" placeholder="請輸入帳號" [(ngModel)]="user.userId" name="account" required="" autofocus="">
+    <label for="inputPassword" class="sr-only">請輸入密碼</label>
+    <input type="password" class="form-control" placeholder="請輸入密碼" [(ngModel)]="user.password" name="password" required="" >
+    <div class="checkbox">
+      <label><input type="checkbox" value="remember-me" [(ngModel)]="isRememberMe" name="rememberMe">記住我</label>
+    </div>
+    <div>
+      <label [hidden]="isHidden" align="right" style="color:#FF0000">帳號或密碼錯誤!</label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">登入</button>
+  </form>
+
+  <button (click)="httpTest()">測試http</button>
+  <label>{{result}}</label>
+ </div>

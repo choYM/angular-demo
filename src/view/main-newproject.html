@@ -1,0 +1,32 @@
+<div class="container">
+    <h3>專案管理</h3>
+    <span>設定步驟: 1.原始碼管理 -> 2.建置環境 -> 3.建置後動作</span>
+    <hr>
+
+    <p class="row">
+        <label class='col-md-2 control-label'>專案編碼</label>
+        <input class="col-md-7">
+        <label class="col-md-3">編碼沒有重複，可以使用</label>
+    </p>
+    <p class="row">
+        <label class='col-md-2 control-label'>專案名稱</label>
+        <input class="col-md-7">
+    </p>
+    <p class="row">
+        <label class='col-md-2'>專案描述</label>
+        <textarea class="col-md-7" cols="40" rows="5"></textarea>
+    </p>
+    <p class="row">
+        <label class='col-md-2'>狀態</label>
+        <select class="col-md-2">
+            <option>有效</option>
+            <option>無效</option>
+        </select>
+    </p>
+    <nav>
+        <ul class="pager">
+            <li class="previous"><a routerLink="../new-project1" routerLinkActive="active">下一步</a></li>
+            <li class="next"><a href="#">不儲存，返回</a></li>
+        </ul>
+    </nav>
+</div>

@@ -1,0 +1,8 @@
+span {
+    color: dodgerblue;
+}
+
+.control-label::after { 
+   content:"*";
+   color:red;
+}

@@ -1,0 +1,29 @@
+<div class="container">
+    <h3>專案管理</h3>
+    <span>設定步驟: 2.建置環境</span>
+    <hr>
+
+    <div id="cmdZone">
+        <p class="row">
+            <label class="col-md-2 control-label">新增建置步驟</label>
+            <select class="col-md-6" [ngModel]="selectedOption" (ngModelChange)="onChangeOption($event)">
+                <option value="0">請選擇</option>
+                <option value="1">Shell搬移到XX</option>
+                <option value="2">Shell清除檔案</option>
+                <option value="3">Maven XX</option>
+            </select>
+            <span class="col-md-4">
+                <input type="button" class="btn btn-xs btn-default" value="增加命令框" [disabled]="selectedOption==0" (click)="onClickAddCmd()">
+                <input type="button" class="btn btn-xs btn-default" value="刪除命令框" [disabled]="" (click)="onClickDeleteCmd()">
+            </span>
+        </p>
+        
+    </div>
+    
+    <nav>
+        <ul class="pager">
+            <li class="previous"><a routerLink="../new-project3" routerLinkActive="active">下一步</a></li>
+            <li class="next"><a href="#">不儲存，返回</a></li>
+        </ul>
+    </nav>
+</div>

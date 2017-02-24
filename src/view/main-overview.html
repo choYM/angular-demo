@@ -1,0 +1,36 @@
+<div class="container" id="projectDiv">
+    <div *ngFor="let project of paginationQueryResult.data" class="col-md-3 well well-sm">
+        <h2>取得最新程式碼{{project.projectName}}</h2>
+        <p>上一次執行: {{project.manage.modiDate}}</p>
+        <div>
+            最新執行結果:
+            <img src="../img/u227.png" />
+            <img src="../img/u229.png" />
+        </div>
+        <div>
+            <input type="button" class="imgBtn" style="background-image:url(../img/u244.png);">
+
+            <input type="button" class="imgBtn" style="background-image:url(../img/u246.png);">
+            <input type="button" class="imgBtn" style="background-image:url(../img/u238.png);">
+            <input type="button" class="imgBtn" style="background-image:url(../img/u240.png);">
+            <input type="button" class="imgBtn" style="background-image:url(../img/u236.png);">
+            <input type="button" class="imgBtn" style="background-image:url(../img/u242.png);">
+
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col-md-10" style="display: inline-block">
+        <button type="button" class="btn btn-lg btn-success" (click)="onClickFirstPage()">第一頁</button>
+        <button type="button" class="btn btn-lg btn-success" (click)="onClickPreviousPage()" [disabled]="pageList.selectedPage==1">上一頁</button>
+        <button type="button" class="btn btn-lg btn-success" (click)="onClickNextPage()" [disabled]="pageList.selectedPage==pageList.list[pageList.list.length-1]">下一頁</button>
+        <button type="button" class="btn btn-lg btn-success" (click)="onClickLastPage()">最後頁</button>
+    </div>
+    <div class="col-md-2" style="display: inline-block">
+        頁次
+        <select [ngModel]="pageList.selectedPage" (ngModelChange)="onChangePage($event)">
+            <option [ngValue]="page" *ngFor="let page of pageList.list" >{{page}}</option>
+        </select> 資料總數: {{paginationQueryResult.rowCount}}
+    </div>
+</div>
